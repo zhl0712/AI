@@ -1,0 +1,19 @@
+2025-12-15 08:11:57,199 - HTTP_SERVER - INFO - Server running at http://0.0.0.0:3001/
+2025-12-15 08:11:57,199 - HTTP_SERVER - INFO - Using 20 worker threads
+2025-12-15 08:12:02,716 - HTTP_SERVER - INFO - Request: GET /health
+2025-12-15 08:12:02,716 - HTTP_SERVER - INFO - Headers: {'User-Agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.18362.145', 'Host': 'localhost:3001', 'Connection': 'Keep-Alive'}
+2025-12-15 08:12:13,969 - HTTP_SERVER - INFO - Request: POST /api/test
+2025-12-15 08:12:13,969 - HTTP_SERVER - INFO - Headers: {'User-Agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.18362.145', 'Content-Type': 'application/json', 'Host': 'localhost:3001', 'Content-Length': '30', 'Connection': 'Keep-Alive'}
+2025-12-15 08:12:13,970 - HTTP_SERVER - INFO - Body: {'name': 'test', 'value': 123}
+2025-12-15 08:20:25,261 - HTTP_SERVER - INFO - Server running at http://0.0.0.0:3001/
+2025-12-15 08:20:25,262 - HTTP_SERVER - INFO - Using 20 worker threads
+2025-12-15 08:23:07,420 - HTTP_SERVER - INFO - Server is shutting down...
+2025-12-15 08:23:07,420 - HTTP_SERVER - INFO - Server has been shut down successfully
+2025-12-15 08:23:07,629 - HTTP_SERVER - INFO - Server running at http://0.0.0.0:3001/
+2025-12-15 08:23:07,630 - HTTP_SERVER - INFO - Using 20 worker threads
+2025-12-15 08:25:08,346 - HTTP_SERVER - INFO - Server is shutting down...
+2025-12-15 08:25:08,346 - HTTP_SERVER - INFO - Server has been shut down successfully
+2025-12-15 08:41:55,780 - HTTP_SERVER - INFO - Server running at http://0.0.0.0:3001/
+2025-12-15 08:41:55,780 - HTTP_SERVER - INFO - Using 20 worker threads
+2025-12-15 10:26:58,899 - HTTP_SERVER - INFO - Server is shutting down...
+2025-12-15 10:26:58,899 - HTTP_SERVER - INFO - Server has been shut down successfully
