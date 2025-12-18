@@ -152,7 +152,7 @@ class ThreadedHTTPServer(http.server.HTTPServer):
     
     def process_request(self, request, client_address):
         self.executor.submit(self._process_request_thread, request, client_address)
-
+    
     def _process_request_thread(self, request, client_address):
         try:
             self.finish_request(request, client_address)
@@ -161,7 +161,30 @@ class ThreadedHTTPServer(http.server.HTTPServer):
         finally:
             self.shutdown_request(request)
 
-if __name__ == '__main__':
+if __name__ == '__main__':def process_request(self, request, client_address):
+    """
+    处理HTTP请求的异步方法
+    
+    该方法重写了父类的同步请求处理逻辑，使用线程池实现异步处理，
+    避免单个请求阻塞服务器主线程，提高并发性能。
+    
+    参数:
+        request: 客户端请求对象
+        client_address: 客户端地址信息
+    
+    工作原理:
+        1. 将请求处理任务提交到线程池执行器
+        2. 线程池中的工作线程调用 _process_request_thread 方法
+        3. 主线程可以继续接收新的连接请求
+        4. 每个请求在独立的线程中处理，互不阻塞
+    
+    优点:
+        - 提高服务器并发处理能力
+        - 避免I/O阻塞影响新连接接收
+        - 支持多客户端同时访问
+    """
+    self.executor.submit(self._process_request_thread, request, client_address)
+
     try:
         server = ThreadedHTTPServer((HOST, PORT), RequestHandler, max_workers=20)
         logger.info(f"Server running at http://{HOST}:{PORT}/")
