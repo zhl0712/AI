@@ -15,7 +15,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler('http_server.log', encoding='utf-8')
+        logging.FileHandler('../http_server.log', encoding='utf-8')
     ]
 )
 logger = logging.getLogger('HTTP_SERVER')
